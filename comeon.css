@@ -1,0 +1,70 @@
+body,div,ul,li,img{
+	margin:0;
+	padding: 0;
+}
+#demo {
+	display: block;
+    width: 400px;
+    height: 255px;
+    margin:50px 50px 15px 50px;
+    position: relative;
+    border: 1px solid #ccc;
+}
+#smallBox{
+	position:relative;
+	z-index: 1;
+}
+#smallBox img{
+	position:absolute;
+  vertical-align:middle;  /*  bug，这个空隙在ff和chrome中都存在 */
+}
+
+#mark{
+   position:absolute;
+   width: 400px;
+   height: 255px;
+   opacity: 0;
+   z-index: 10;
+   background-color: #fff;
+   filter: alpha(opacity=0);    /*兼容IE ???*/
+}
+#floatBox{
+	display: none; 
+	width: 160px;
+	height: 120px;
+	position: absolute;
+	background:url(2-2.png);
+	/* background-attachment: scroll; */
+  background-repeat: repeat;
+	border:1px solid #ccc;
+	opacity: 0.7;
+	cursor: move;
+	z-index: 6;
+}
+
+#bigBox{
+    display: none;
+    position: absolute;
+    top: 0;
+    left:460px;
+    width: 768px;
+    height: 568px;
+    overflow: hidden;
+    border:1px solid #ccc;
+    z-index: 1;
+}
+#bigBox img {
+    position: absolute;
+    z-index: 5
+} 
+#sSmallBox{
+	display: inline-block;
+	margin:15px 50px 25px 50px;
+	padding-right: 16px;
+
+}
+#sSmallBox li{
+    list-style-type: none;
+    padding-left: 16px; 
+    float: left;
+}
